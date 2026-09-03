@@ -1,0 +1,31 @@
+{
+  "name": "revenue-os",
+  "version": "0.1.0",
+  "description": "Evidence-first lead, ERC-20 invoice, and payment-verification control plane for Cloudflare Workers.",
+  "private": true,
+  "license": "MIT",
+  "author": "Bozimeile",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bozimeile/revenue-os.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bozimeile/revenue-os/issues"
+  },
+  "homepage": "https://github.com/bozimeile/revenue-os#readme",
+  "type": "module",
+  "scripts": {
+    "build": "wrangler deploy --dry-run --outdir .wrangler-dry-run",
+    "check": "node --check src/index.js && node --test",
+    "db:migrate:local": "wrangler d1 migrations apply revenue-os --local",
+    "dev": "wrangler dev",
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-lines=80 --test-coverage-branches=80 --test-coverage-functions=80"
+  },
+  "devDependencies": {
+    "wrangler": "4.128.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

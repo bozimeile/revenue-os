@@ -1,0 +1,5 @@
+ADMIN_TOKEN=replace-with-at-least-32-random-characters
+INVOICE_TOKEN_SECRET=replace-with-at-least-32-random-characters
+PAYMENT_CONFIG_JSON={"chains":[{"chainId":46630,"rpcUrls":["https://first-public-rpc.example/rpc","https://second-independent-rpc.example/rpc"],"rpcQuorum":2,"tokens":[{"symbol":"USDC","address":"0x1111111111111111111111111111111111111111","recipient":"0x3333333333333333333333333333333333333333","decimals":6,"minConfirmations":6}]}]}
+ALLOCATION_POLICY_JSON=[{"key":"tax_reserve","bps":2500},{"key":"operating_reserve","bps":1000},{"key":"delivery_and_tools","bps":500},{"key":"owner_available","bps":6000}]
+LEAD_SOURCES_JSON=[{"name":"integration-work","url":"https://api.github.com/search/issues?q=%28wallet%20OR%20payment%20OR%20settlement%20OR%20exchange%20OR%20cloudflare%29%20%28contractor%20OR%20hiring%20OR%20%22help%20wanted%22%29%20is%3Aissue%20is%3Aopen","minimumScore":70,"minimumBudgetUsd":500}]
